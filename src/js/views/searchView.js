@@ -7,7 +7,9 @@ export const clearInput = () => {
 }
 export const clearResults = () => {
     elements.moviesList.innerHTML = '';
+    elements.error.innerHTML = '';
 }
+
 
 const checkImg = (url, img) => {
     if (!img) return 'img/img-not.png';
@@ -47,7 +49,12 @@ const renderFilmUI = (film) => {
     `
     elements.moviesList.insertAdjacentHTML('beforeend', markup);
 }
-
+export const renderNoResults = () => {
+    const markup = `
+    <h3 class="heading-error">Result not found</h3>
+    `
+    elements.error.insertAdjacentHTML('afterbegin', markup);
+}
 export const renderResults = (results) => {
     results.forEach(res => renderFilmUI(res))
 }

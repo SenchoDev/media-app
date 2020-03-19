@@ -18,6 +18,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'searches.html',
             template: './src/searches.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'trending.html',
+            template: './src/trending.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'commingSoon.html',
+            template: './src/commingSoon.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: './src/login.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'signin.html',
+            template: './src/signin.html'
         })
     ],
     module: {

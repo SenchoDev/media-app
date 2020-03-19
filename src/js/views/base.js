@@ -4,6 +4,8 @@ import {key} from '../config'
 export const genredIDs = [];
 
 export const elements = {
+    error: document.querySelector('.erorr'),
+    searchText: document.querySelector('.search'),
     searchForm: document.querySelector('.search-box'),
     searchInput: document.querySelector('.search__field'),
     moviesList: document.querySelector('.movies'),
@@ -12,7 +14,6 @@ export const elements = {
     release: document.querySelector('.newRrealease-link'),
     navbar: document.querySelector('.navbar'),
 }
-
 export const getMovieGenres = async () => {
     try{
         const res = await axios(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}&language=en-US`);
@@ -20,6 +21,9 @@ export const getMovieGenres = async () => {
     } catch(err){
         alert(err)
     }
+}
+export const deleteContent = () => {
+    elements.content.innerHTML = '';
 }
 
 // export const renderSearchPage = () => {
@@ -61,4 +65,4 @@ export const getMovieGenres = async () => {
 //     `;
 //     elements.content.insertAdjacentHTML('afterbegin', markup)
 
-//}
+// }
