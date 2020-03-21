@@ -33,7 +33,7 @@ const checkColor = (vote) => {
 
 const renderFilmUI = (film) => {
     const markup = `
-    <a href="movie.html">
+    <a href="#${film.id}">
     <div class="movies__card">
         ${checkColor(film.vote_average)}
         <div class="movies__black"><img src="${checkImg('http://image.tmdb.org/t/p/w300//', film.poster_path)}" alt="" class="movies__img"></div>

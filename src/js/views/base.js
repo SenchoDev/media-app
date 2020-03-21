@@ -13,6 +13,7 @@ export const elements = {
     search: document.querySelector('.search-link'),
     release: document.querySelector('.newRrealease-link'),
     navbar: document.querySelector('.navbar'),
+    grid: document.querySelector('.container-2')
 }
 export const getMovieGenres = async () => {
     try{
