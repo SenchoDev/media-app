@@ -24,8 +24,8 @@ module.exports = {
             template: './src/trending.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'commingSoon.html',
-            template: './src/commingSoon.html'
+            filename: 'comingSoon.html',
+            template: './src/comingSoon.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'login.html',
