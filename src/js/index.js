@@ -18,9 +18,7 @@ const controlSearch = async () => {
 
         //prepare UI For the results, add loader, clear results, clear input
         searchView.clearInput();
-        searchView.clearResults();
-
-        
+        searchView.clearResults();     
 
         try {
             // search for films
@@ -36,9 +34,8 @@ const controlSearch = async () => {
                 searchView.renderNoResults();
             }
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
-
     }
 }
 
@@ -67,16 +64,10 @@ const controlMovie =  async () => {
 
             movieView.renderMovie(state.movie);
 
-            console.log(state.movie);
-
         } catch(err){
             console.error(err);
         }
-        
-
     }
-
-
 }
 
 

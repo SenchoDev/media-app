@@ -6,7 +6,6 @@ export default class Search {
     constructor(id) {
         this.id = id;
     }
-
     async getResults() {
         try {
             const res = await axios(`https://api.themoviedb.org/3/movie/${this.id}?api_key=${key}&language=en-US`);

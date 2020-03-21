@@ -1,4 +1,4 @@
-import { elements, genredIDs} from './base';
+import { elements} from './base';
 
 export const getInput = () => elements.searchInput.value;
 
@@ -9,7 +9,6 @@ export const clearResults = () => {
     elements.moviesList.innerHTML = '';
     elements.error.innerHTML = '';
 }
-
 
 const checkImg = (url, img) => {
     if (!img) return 'img/img-not.png';
@@ -30,7 +29,6 @@ const checkColor = (vote) => {
    </div>`
    }
 }
-
 const renderFilmUI = (film) => {
     const markup = `
     <a href="#${film.id}">

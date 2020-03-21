@@ -36,7 +36,6 @@ const renderStars = (rating) => {
     }
 }
 
-
 export const renderMovie = (movie) => {
     //"${checkImg('http://image.tmdb.org/t/p/w300//', film.poster_path)}"
     const markup = `
@@ -68,10 +67,7 @@ export const renderMovie = (movie) => {
                     <h5 class="heading--five">See all reviews</h5>
                     <img src="img/iconmonstr-arrow-2@2x.png" alt="" class="main__svg">
                 </a>
-
-
             </div>
-
         </div>
         <div class="about">
             <div class="about__box">
@@ -104,9 +100,7 @@ export const renderMovie = (movie) => {
             </div>
 
         </div>
-    </div>   `
-
-        
-   document.body.innerHTML = markup;
+    </div>   `   
+    document.body.innerHTML = markup;
     
 }

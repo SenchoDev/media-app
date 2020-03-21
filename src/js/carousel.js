@@ -11,7 +11,6 @@ const setSlidePosition = (slide, index) => {
 }
 slides.forEach(setSlidePosition);
 
-
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');

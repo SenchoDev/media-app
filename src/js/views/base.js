@@ -20,7 +20,7 @@ export const getMovieGenres = async () => {
         const res = await axios(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}&language=en-US`);
         genredIDs.push(...res.data.genres);
     } catch(err){
-        alert(err)
+        console.error(err);
     }
 }
 export const deleteContent = () => {
