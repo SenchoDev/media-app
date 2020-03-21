@@ -1,6 +1,8 @@
 import { elements, getMovieGenres, deleteContent } from './views/base'
 import * as searchView from './views/searchView'
+import * as movieView from './views/movieView'
 import Search from './models/Search';
+import Movie from './models/Movie';
 
 const state = {};
 
@@ -34,7 +36,7 @@ const controlSearch = async () => {
                 searchView.renderNoResults();
             }
         } catch (err) {
-            alert(err);
+            console.log(err);
         }
 
     }
@@ -47,8 +49,38 @@ if (elements.searchForm) {
     })
 }
 
-//---------------------NEW RELEASES-----------------------
+//---------------------MOVIE INFO-----------------------
+const controlMovie =  async () => {
+    //Get ID from url
+    const id = window.location.hash.replace('#', '');
 
+    if (id) {
+        //clear movie
+        movieView.clearDisplay();
+
+        //make object fromg given id
+        state.movie = new Movie(id);
+
+        try{
+            // get data from film
+            await state.movie.getResults()
+
+            movieView.renderMovie(state.movie);
+
+            console.log(state.movie);
+
+        } catch(err){
+            console.error(err);
+        }
+        
+
+    }
+
+
+}
+
+
+window.addEventListener('hashchange', controlMovie);
 getMovieGenres();
 
 
