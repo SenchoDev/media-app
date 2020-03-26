@@ -23,18 +23,7 @@ module.exports = {
             filename: 'trending.html',
             template: './src/trending.html'
         }),
-        new HtmlWebpackPlugin({
-            filename: 'comingSoon.html',
-            template: './src/comingSoon.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'login.html',
-            template: './src/login.html'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'signin.html',
-            template: './src/signin.html'
-        })
+        
     ],
     module: {
         rules: [
